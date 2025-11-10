@@ -8,7 +8,7 @@ plugins {
     id 'maven-publish'
 }
 
-group = 'io.openbpm.ui'
+group = 'io.flowset.ui'
 
 repositories {
     mavenCentral()
@@ -27,13 +27,13 @@ java {
 }
 
 publishing {
-    if (rootProject.hasProperty('openbpmUploadUrl')) {
+    if (rootProject.hasProperty('flowsetUploadUrl')) {
         repositories {
             maven {
-                url = rootProject['openbpmUploadUrl']
+                url = rootProject['flowsetUploadUrl']
                 credentials {
-                    username rootProject['openbpmUploadUser']
-                    password rootProject['openbpmUploadPassword']
+                    username rootProject['flowsetUploadUser']
+                    password rootProject['flowsetUploadPassword']
                 }
                 allowInsecureProtocol = true
             }
@@ -42,7 +42,7 @@ publishing {
 
     publications {
         maven(MavenPublication) {
-            artifactId = 'openbpm-theme'
+            artifactId = 'flowset-theme'
             from components.java
         }
     }
