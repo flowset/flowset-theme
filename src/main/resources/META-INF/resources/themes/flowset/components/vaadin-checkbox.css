@@ -1,0 +1,26 @@
+/*
+ * Copyright (c) Haulmont 2025. All Rights Reserved.
+ * Use is subject to license terms.
+ */
+
+[part="checkbox"] {
+    background-color: var(--lumo-base-color);
+    box-shadow: var(--vaadin-input-field-default-box-shadow);
+}
+
+:host([readonly]) [part="checkbox"] {
+   box-shadow: none;
+}
+
+:host([disabled]) [part="checkbox"] {
+    box-shadow: var(--vaadin-input-field-disabled-box-shadow);
+}
+
+:host([invalid]) [part="checkbox"] {
+    box-shadow: var(--vaadin-input-field-error-box-shadow);
+}
+
+:host([focused]) [part="checkbox"] {
+    box-shadow: var(--vaadin-input-field-focus-box-shadow);
+}
+

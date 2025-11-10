@@ -1,0 +1,51 @@
+/*
+ * Copyright (c) Haulmont 2025. All Rights Reserved.
+ * Use is subject to license terms.
+ */
+
+html {
+    --lumo-primary-text-color: rgb(23, 98, 120);
+    --lumo-primary-color-50pct: rgba(23, 98, 120, 0.5);
+    --lumo-primary-color-60pct: rgba(23, 98, 120, 0.6);
+    --lumo-primary-color-10pct: rgba(23, 98, 120, 0.1);
+
+    --lumo-primary-color:  rgb(23, 98, 120);
+
+    --lumo-success-color: rgb(54, 143, 82);
+    --lumo-success-text-color: rgb(54, 143, 82);
+    --lumo-success-color-50pct: rgba(54, 143, 82, 0.5);
+    --lumo-success-color-10pct: rgba(54, 143, 82, 0.1);
+
+    --lumo-error-color: rgb(212, 44, 44);
+    --lumo-error-text-color: rgb(212, 44, 44);
+    --lumo-error-color-50pct: rgba(212, 44, 44, 0.5);
+    --lumo-error-color-10pct: rgba(212, 44, 44, 0.1);
+
+    --lumo-warning-color: rgb(230, 167, 0);
+    --lumo-warning-color-50pct: rgba(230, 167, 0, 0.5);
+    --lumo-warning-color-20pct: rgba(230, 167, 0, 0.2);
+    --lumo-warning-color-10pct: rgba(230, 167, 0, 0.1);
+
+    --vaadin-input-field-default-box-shadow: inset 0 0 0 1px var(--lumo-contrast-30pct);
+    --vaadin-input-field-focus-box-shadow: inset 0 0 0 2px var(--lumo-primary-color-50pct);
+    --vaadin-input-field-error-box-shadow: inset 0 0 0 2px var(--lumo-error-color-50pct);
+    --vaadin-input-field-disabled-box-shadow: inset 0 0 0 1px var(--lumo-contrast-10pct);
+
+    --vaadin-checkbox-background-hover: var(--lumo-contrast-10pct);
+    --vaadin-radio-button-background-hover: var(--lumo-contrast-10pct);
+}
+
+[theme~='badge'] {
+    border: 1px solid var(--lumo-primary-color-10pct);
+}
+[theme~='badge'][theme~='success'] {
+    border-color: var(--lumo-success-color-10pct);
+}
+
+[theme~='badge'][theme~='error'] {
+    border-color: var(--lumo-error-color-10pct);
+}
+
+[theme~='badge'][theme~='warning'] {
+    border-color: var(--lumo-warning-color-20pct);
+}
