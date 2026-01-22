@@ -1,0 +1,39 @@
+[part~='header-cell'] {
+    background-color: var(--grid-header-bg-color);
+}
+
+:host(:not([theme~='no-border'])) {
+    border-radius: var(--grid-border-radius);
+}
+[part~='row']:before,
+[part~='focused-cell'] {
+    border-radius: var(--grid-border-radius);
+}
+
+[part~='row']:only-child [part~='header-cell'] {
+    min-height: var(--lumo-size-l);
+}
+
+[part~='first-row'] {
+    border-start-start-radius: var(--grid-border-radius);
+    border-start-end-radius: var(--grid-border-radius);
+}
+
+[part~='first-row'] [part~='first-column-cell']{
+    border-start-start-radius: var(--grid-border-radius);
+}
+[part~='first-row'] [part~='last-column-cell'] {
+    border-start-end-radius: var(--grid-border-radius);
+}
+
+[part~='last-row']:not([part~='first-row']) {
+    border-end-start-radius: var(--grid-border-radius);
+    border-end-end-radius: var(--grid-border-radius);
+}
+
+[part~='last-row']:not([part~='first-row']) [part~='first-column-cell'] {
+    border-end-start-radius: var(--grid-border-radius);
+}
+[part~='last-row']:not([part~='first-row']) [part~='last-column-cell'] {
+    border-end-end-radius: var(--grid-border-radius);
+}
