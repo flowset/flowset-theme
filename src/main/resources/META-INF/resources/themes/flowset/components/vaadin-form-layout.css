@@ -1,0 +1,3 @@
+:host {
+    --vaadin-form-layout-column-spacing: var(--lumo-space-m);
+}
