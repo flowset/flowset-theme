@@ -13,12 +13,12 @@ group = 'io.flowset.ui'
 repositories {
     mavenCentral()
     maven {
-        url 'https://global.repo.jmix.io/repository/public'
+        url = 'https://global.repo.jmix.io/repository/public'
     }
 }
 
 dependencies {
-    implementation 'io.jmix.flowui:jmix-flowui-themes:2.4.1'
+    implementation 'io.jmix.flowui:jmix-flowui-themes:3.0.1'
 }
 
 java {
@@ -32,8 +32,8 @@ publishing {
             maven {
                 url = rootProject['flowsetUploadUrl']
                 credentials {
-                    username rootProject['flowsetUploadUser']
-                    password rootProject['flowsetUploadPassword']
+                    username = rootProject['flowsetUploadUser']
+                    password = rootProject['flowsetUploadPassword']
                 }
                 allowInsecureProtocol = true
             }

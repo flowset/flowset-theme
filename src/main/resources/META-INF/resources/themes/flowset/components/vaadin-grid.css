@@ -1,39 +1,67 @@
-[part~='header-cell'] {
+/*
+ * Copyright (c) Haulmont 2026. All Rights Reserved.
+ * Use is subject to license terms.
+ */
+
+vaadin-grid::part(header-cell) {
     background-color: var(--grid-header-bg-color);
 }
 
-:host(:not([theme~='no-border'])) {
-    border-radius: var(--grid-border-radius);
-}
-[part~='row']:before,
-[part~='focused-cell'] {
+vaadin-grid:not([theme~="no-border"]) {
     border-radius: var(--grid-border-radius);
 }
 
-[part~='row']:only-child [part~='header-cell'] {
+/* The keyboard-focus outline is drawn on the row's and cell's ::after pseudo-element */
+vaadin-grid::part(row)::after,
+vaadin-grid::part(focused-cell)::after {
+    border-radius: var(--grid-border-radius);
+}
+
+/* Cells of a header row that is both the first and the last one, i.e. a single header row */
+vaadin-grid::part(first-header-row-cell last-header-row-cell) {
     min-height: var(--lumo-size-l);
 }
 
-[part~='first-row'] {
+vaadin-grid::part(first-row) {
     border-start-start-radius: var(--grid-border-radius);
     border-start-end-radius: var(--grid-border-radius);
 }
 
-[part~='first-row'] [part~='first-column-cell']{
+vaadin-grid::part(first-row-cell first-column-cell) {
     border-start-start-radius: var(--grid-border-radius);
 }
-[part~='first-row'] [part~='last-column-cell'] {
+
+vaadin-grid::part(first-row-cell last-column-cell) {
     border-start-end-radius: var(--grid-border-radius);
 }
 
-[part~='last-row']:not([part~='first-row']) {
+vaadin-grid::part(last-row) {
     border-end-start-radius: var(--grid-border-radius);
     border-end-end-radius: var(--grid-border-radius);
 }
 
-[part~='last-row']:not([part~='first-row']) [part~='first-column-cell'] {
+vaadin-grid::part(last-row-cell first-column-cell) {
     border-end-start-radius: var(--grid-border-radius);
 }
-[part~='last-row']:not([part~='first-row']) [part~='last-column-cell'] {
+
+vaadin-grid::part(last-row-cell last-column-cell) {
     border-end-end-radius: var(--grid-border-radius);
+}
+
+/*
+ * ::part() cannot express :not(), so the ":not([part~='first-row'])" guard that the three rules
+ * above used to carry is applied here instead: a row that is both the first and the last one,
+ * i.e. a grid with a single body row, keeps only its start-side corners rounded.
+ */
+vaadin-grid::part(first-row last-row) {
+    border-end-start-radius: 0;
+    border-end-end-radius: 0;
+}
+
+vaadin-grid::part(first-row-cell last-row-cell first-column-cell) {
+    border-end-start-radius: 0;
+}
+
+vaadin-grid::part(first-row-cell last-row-cell last-column-cell) {
+    border-end-end-radius: 0;
 }

@@ -2,6 +2,20 @@
  * Copyright (c) Haulmont 2025. All Rights Reserved.
  * Use is subject to license terms.
  */
+@import 'components/vaadin-button.css';
+@import 'components/vaadin-checkbox.css';
+@import 'components/vaadin-combo-box.css';
+@import 'components/vaadin-date-picker.css';
+@import 'components/vaadin-form-layout.css';
+@import 'components/vaadin-grid.css';
+@import 'components/vaadin-multi-select-combo-box.css';
+@import 'components/vaadin-number-field.css';
+@import 'components/vaadin-password-field.css';
+@import 'components/vaadin-radio-button.css';
+@import 'components/vaadin-select.css';
+@import 'components/vaadin-text-area.css';
+@import 'components/vaadin-text-field.css';
+@import 'components/vaadin-time-picker.css';
 
 html {
     --lumo-primary-text-color: rgb(23, 98, 120);
@@ -88,6 +102,6 @@ jmix-code-editor::part(input-field) {
     font-size: var(--lumo-font-size-m) !important;
 }
 
-vaadin-dialog-overlay::part(footer) {
+vaadin-dialog::part(footer) {
     background-color: transparent;
 }

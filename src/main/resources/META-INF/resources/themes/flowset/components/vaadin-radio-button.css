@@ -3,28 +3,34 @@
  * Use is subject to license terms.
  */
 
-[part="radio"] {
+vaadin-radio-button::part(radio) {
     background-color: var(--lumo-base-color);
     box-shadow: var(--vaadin-input-field-default-box-shadow);
 }
 
-:host([readonly]) [part="radio"] {
-   box-shadow: none;
-}
-
-:host([disabled]) [part="radio"] {
+vaadin-radio-button[disabled]::part(radio) {
     box-shadow: var(--vaadin-input-field-disabled-box-shadow);
 }
 
-:host([checked]) [part="radio"] {
+/*
+ * readonly and invalid are reflected on vaadin-radio-group, never on the buttons
+ * (a readonly group marks its unchecked buttons disabled instead). :where() keeps
+ * the specificity equal to the sibling rules, so the order-based cascade still
+ * decides: readonly beats the disabled rule above, focused below beats invalid.
+ */
+vaadin-radio-group[readonly] :where(vaadin-radio-button)::part(radio) {
     box-shadow: none;
 }
 
-:host([invalid]) [part="radio"] {
+vaadin-radio-button[checked]::part(radio) {
+    box-shadow: none;
+}
+
+vaadin-radio-group[invalid] :where(vaadin-radio-button)::part(radio) {
     box-shadow: var(--vaadin-input-field-error-box-shadow);
 }
 
-:host([focused]) [part="radio"] {
+vaadin-radio-button[focused]::part(radio) {
     box-shadow: var(--vaadin-input-field-focus-box-shadow);
 }
 
