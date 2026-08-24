@@ -3,24 +3,24 @@
  * Use is subject to license terms.
  */
 
-[part="checkbox"] {
+vaadin-checkbox::part(checkbox) {
     background-color: var(--lumo-base-color);
     box-shadow: var(--vaadin-input-field-default-box-shadow);
 }
 
-:host([readonly]) [part="checkbox"] {
+vaadin-checkbox[readonly]::part(checkbox) {
    box-shadow: none;
 }
 
-:host([disabled]) [part="checkbox"] {
+vaadin-checkbox[disabled]::part(checkbox) {
     box-shadow: var(--vaadin-input-field-disabled-box-shadow);
 }
 
-:host([invalid]) [part="checkbox"] {
+vaadin-checkbox[invalid]::part(checkbox) {
     box-shadow: var(--vaadin-input-field-error-box-shadow);
 }
 
-:host([focused]) [part="checkbox"] {
+vaadin-checkbox[focused]::part(checkbox) {
     box-shadow: var(--vaadin-input-field-focus-box-shadow);
 }
 

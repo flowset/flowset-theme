@@ -3,24 +3,24 @@
  * Use is subject to license terms.
  */
 
-[part="input-field"] {
+vaadin-number-field::part(input-field) {
     background-color: var(--lumo-base-color);
     box-shadow: var(--vaadin-input-field-default-box-shadow);
 }
 
-:host([readonly]) [part="input-field"] {
+vaadin-number-field[readonly]::part(input-field) {
     box-shadow: none;
 }
 
-:host([disabled]) [part="input-field"] {
+vaadin-number-field[disabled]::part(input-field) {
     box-shadow: var(--vaadin-input-field-disabled-box-shadow);
 }
 
-:host([invalid]) [part="input-field"] {
+vaadin-number-field[invalid]::part(input-field) {
     box-shadow: var(--vaadin-input-field-error-box-shadow);
 }
 
-:host([focused]) [part="input-field"] {
+vaadin-number-field[focused]::part(input-field) {
     box-shadow: var(--vaadin-input-field-focus-box-shadow);
 }
 

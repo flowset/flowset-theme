@@ -1,15 +1,19 @@
-:host(:not([theme~='tertiary-inline']):not([theme~='tertiary'])) {
-    --vaadin-button-border: 1px solid var(--lumo-contrast-20pct);
-}
-
-:host(:not([theme~='primary'])) {
+vaadin-button:not(
+    [theme~='primary'],
+    [theme~='tertiary'],
+    [theme~='tertiary-inline'],
+    [jmix-role],
+    .dialog-close-button
+) {
+    --_control-button-border-color: var(--lumo-contrast-20pct);
+    --vaadin-button-border: 1px solid var(--_control-button-border-color);
     --vaadin-button-background: var(--lumo-base-color);
 }
 
-:host(:not([theme~='tertiary-inline']):not([theme~='tertiary'])):hover {
-    border-color: var(--lumo-contrast-30pct);
+vaadin-button:hover {
+    --_control-button-border-color: var(--lumo-contrast-30pct);
 }
 
-:host(:not([theme~='tertiary-inline']):not([theme~='tertiary'])[disabled]) {
-    border-color: var(--lumo-contrast-10pct);
+vaadin-button[disabled] {
+    --_control-button-border-color: var(--lumo-contrast-10pct);
 }
