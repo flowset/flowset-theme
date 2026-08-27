@@ -4,18 +4,11 @@
  */
 @import 'components/vaadin-button.css';
 @import 'components/vaadin-checkbox.css';
-@import 'components/vaadin-combo-box.css';
-@import 'components/vaadin-date-picker.css';
 @import 'components/vaadin-form-layout.css';
 @import 'components/vaadin-grid.css';
-@import 'components/vaadin-multi-select-combo-box.css';
-@import 'components/vaadin-number-field.css';
-@import 'components/vaadin-password-field.css';
 @import 'components/vaadin-radio-button.css';
-@import 'components/vaadin-select.css';
 @import 'components/vaadin-text-area.css';
-@import 'components/vaadin-text-field.css';
-@import 'components/vaadin-time-picker.css';
+@import 'components/input-field.css';
 
 html {
     --lumo-primary-text-color: rgb(23, 98, 120);
@@ -40,10 +33,11 @@ html {
     --lumo-warning-color-20pct: rgba(230, 167, 0, 0.2);
     --lumo-warning-color-10pct: rgba(230, 167, 0, 0.1);
 
-    --vaadin-input-field-default-box-shadow: inset 0 0 0 1px var(--lumo-contrast-30pct);
-    --vaadin-input-field-focus-box-shadow: inset 0 0 0 2px var(--lumo-primary-color-50pct);
-    --vaadin-input-field-error-box-shadow: inset 0 0 0 2px var(--lumo-error-color-50pct);
-    --vaadin-input-field-disabled-box-shadow: inset 0 0 0 1px var(--lumo-contrast-10pct);
+    --vaadin-input-field-background: var(--lumo-base-color);
+    --vaadin-input-field-invalid-background: var(--lumo-base-color);
+    --vaadin-input-field-disabled-background: var(--lumo-base-color);
+    --vaadin-input-field-border-width: 1px;
+    --vaadin-input-field-border-color: var(--lumo-contrast-30pct);
 
     --vaadin-checkbox-background-hover: var(--lumo-contrast-10pct);
     --vaadin-radio-button-background-hover: var(--lumo-contrast-10pct);

@@ -17,3 +17,21 @@ vaadin-button:hover {
 vaadin-button[disabled] {
     --_control-button-border-color: var(--lumo-contrast-10pct);
 }
+
+vaadin-menu-bar:is(
+    [jmix-role='jmix-dropdown-button'],
+    [jmix-role|='jmix-combo-button'],
+    [jmix-role='jmix-grid-column-visibility']
+) > vaadin-menu-bar-button:not([theme~='primary'], [theme~='tertiary'], [theme~='tertiary-inline']) {
+    --_control-button-border-color: var(--lumo-contrast-20pct);
+    --vaadin-button-border: 1px solid var(--_control-button-border-color);
+    --vaadin-button-background: var(--lumo-base-color);
+
+    &:hover {
+        --_control-button-border-color: var(--lumo-contrast-30pct);
+    }
+
+    &[disabled] {
+        --_control-button-border-color: var(--lumo-contrast-10pct);
+    }
+}

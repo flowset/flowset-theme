@@ -3,27 +3,6 @@
  * Use is subject to license terms.
  */
 
-vaadin-text-area::part(input-field) {
-    background-color: var(--lumo-base-color);
-    box-shadow: var(--vaadin-input-field-default-box-shadow);
-}
-
-vaadin-text-area[readonly]::part(input-field) {
-    box-shadow: none;
-}
-
-vaadin-text-area[disabled]::part(input-field) {
-    box-shadow: var(--vaadin-input-field-disabled-box-shadow);
-}
-
-vaadin-text-area[invalid]::part(input-field) {
-    box-shadow: var(--vaadin-input-field-error-box-shadow);
-}
-
-vaadin-text-area[focused]::part(input-field) {
-    box-shadow: var(--vaadin-input-field-focus-box-shadow);
-}
-
 vaadin-text-area:hover:not([readonly]):not([focused]):not([invalid])::part(input-field) {
     background-color: var(--lumo-contrast-5pct);
 }

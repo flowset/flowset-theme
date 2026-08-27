@@ -3,24 +3,28 @@
  * Use is subject to license terms.
  */
 
-vaadin-checkbox::part(checkbox) {
-    background-color: var(--lumo-base-color);
-    box-shadow: var(--vaadin-input-field-default-box-shadow);
+vaadin-checkbox {
+    --vaadin-checkbox-background: var(--lumo-base-color);
+    --vaadin-input-field-border-width: 1px;
+    --vaadin-input-field-border-color: var(--lumo-contrast-30pct);
 }
 
-vaadin-checkbox[readonly]::part(checkbox) {
-   box-shadow: none;
+vaadin-checkbox[checked],
+vaadin-checkbox[indeterminate] {
+    --vaadin-input-field-border-color: transparent;
 }
 
-vaadin-checkbox[disabled]::part(checkbox) {
-    box-shadow: var(--vaadin-input-field-disabled-box-shadow);
+vaadin-checkbox[readonly] {
+    --vaadin-checkbox-background: transparent;
+    --vaadin-input-field-border-width: 0;
 }
 
-vaadin-checkbox[invalid]::part(checkbox) {
-    box-shadow: var(--vaadin-input-field-error-box-shadow);
+vaadin-checkbox[disabled] {
+    --vaadin-input-field-border-color: var(--lumo-contrast-10pct);
 }
 
-vaadin-checkbox[focused]::part(checkbox) {
-    box-shadow: var(--vaadin-input-field-focus-box-shadow);
+vaadin-checkbox[invalid] {
+    --vaadin-input-field-border-width: 2px;
+    --vaadin-input-field-border-color: var(--lumo-error-color-50pct);
 }
 
