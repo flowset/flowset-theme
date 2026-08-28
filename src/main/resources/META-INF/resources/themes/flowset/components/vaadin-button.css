@@ -10,6 +10,11 @@ vaadin-button:not(
     --vaadin-button-background: var(--lumo-base-color);
 }
 
+.jmix-closeable-layout vaadin-button.close-button {
+    --vaadin-button-border: none;
+    --vaadin-button-background: transparent;
+}
+
 vaadin-button:hover {
     --_control-button-border-color: var(--lumo-contrast-30pct);
 }
